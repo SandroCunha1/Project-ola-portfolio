@@ -4,6 +4,8 @@ import Home from "./paginas/Home"
 import Menu from "./components/Menu";
 import Footer from "./components/Footer"
 import DefaultPage from "./components/DefaultPage";
+import Post from "./paginas/Post";
+import React from "react";
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       <Route path="/" element={<DefaultPage/>}>       
         <Route index element={<Home/>}/>
         <Route path="sobremim" element={<AboutMe/>}/>
+        <Route path="posts/:id" element={<Post/>}/>
       </Route>
 
       <Route path="*" element={<div>Página não encontrada</div>}/>

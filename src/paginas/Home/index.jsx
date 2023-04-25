@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Home.module.css'
 import posts from "../../assets/posts/json/posts.json"
-import Post from '../../components/Post'
+import PostCard from 'components/PostCard'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
      <ul className={styles.posts}>
         {posts.map((post) => (
           <li key={post.id}>
-            <Post post={post}/>
+            <PostCard post={post}/>
           </li>
         ))}
 
